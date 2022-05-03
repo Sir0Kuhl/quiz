@@ -1,0 +1,72 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.quiz-answers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-answers li {
+  display: block;
+  margin-bottom: 5px;
+  line-height: 40px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.25s;
+} 
+
+.quiz-answers li:hover {
+  border-color: #000;
+}
+
+.quiz-answers li.rightAnswer {
+  border-color: #0b0;
+  background: #0b0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.quiz-answers li.wrongAnswer {
+  border-color: #c00;
+  background: #c00;
+  color: #fff;
+  font-weight: bold;
+}
+
+#continue-button {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  font-family: inherit;
+  font-size: inherit;
+  color: #555;
+  border: none;
+  background-color: #ccc;
+  transition: all 0.25s;
+}
+
+#continue-button.active {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
