@@ -11,6 +11,11 @@
       :questionCount="questionCount"
       :rightAnswers="rightAnswers"
     />
+    <div v-if="quizOngoing" class="bottom-button-container">
+      <button class="back-button bottom" @click="route('/')">
+        Zurück zur Quizauswahl
+      </button>
+    </div>
   </div>
 </template>
 
@@ -49,6 +54,9 @@ export default {
           questionCount +
           " answers right."
       );
+    },
+    route(url) {
+      router.push(url);
     },
   },
   mounted() {

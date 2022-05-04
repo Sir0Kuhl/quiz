@@ -1,9 +1,4 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/quiz">Quiz</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view :selectedQuiz="selectedQuiz" :selectQuiz="selectQuiz" />
 </template>
 
@@ -20,6 +15,13 @@ export default {
     selectQuiz(quizIndex) {
       this.selectedQuiz = quizIndex;
       router.push("/quiz");
+    },
+  },
+  watch: {
+    $route(to, from) {
+      if (from.path === "/quiz") {
+        this.selectedQuiz = -1;
+      }
     },
   },
 };
