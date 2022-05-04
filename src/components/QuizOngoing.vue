@@ -50,8 +50,9 @@ export default {
       }
     },
     nextAnswer() {
+      if (this.selectedAnswer === -1) return;
       let questionCount = this.questions.length;
-      if (this.currentQuestion == questionCount - 1) {
+      if (this.currentQuestion === questionCount - 1) {
         this.quizFinished(questionCount, this.rightAnswers);
         return;
       }
