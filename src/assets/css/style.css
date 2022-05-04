@@ -19,12 +19,14 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
+.choose-quiz,
 .quiz-answers {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.choose-quiz li,
 .quiz-answers li {
   display: block;
   margin-bottom: 5px;
@@ -34,6 +36,7 @@ nav a.router-link-exact-active {
   transition: all 0.25s;
 } 
 
+.choose-quiz li:hover,
 .quiz-answers li:hover {
   border-color: #000;
 }
